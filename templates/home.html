@@ -9,6 +9,16 @@
     <li><a href="/page2">The other thing</a></li>
   </ul>
 
+{% with messages=get_flashed_messaged() with.categories=true %}
+  {% if messages %}
+    <ul>
+      {% for messsage in messages %}
+        <li class="{{category}}"> {{message}} </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+      
 <p>This is a sample application to demonstrate authenticating against github oauth,
 using Flask, on Heroku.</p>
 
