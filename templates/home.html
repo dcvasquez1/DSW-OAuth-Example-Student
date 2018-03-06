@@ -9,7 +9,7 @@
     <li><a href="/page2">The other thing</a></li>
   </ul>
 
-{% with messages=get_flashed_messaged(with_categories=true) %}
+{% with messages=get_flashed_messages(with_categories=true) %}
   {% if messages %}
     <ul>
       {% for messsage in messages %}
